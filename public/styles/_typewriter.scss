@@ -1,0 +1,48 @@
+.red {
+    color: #F92672;
+}
+.yellow {
+    color:#E6DB66;
+	text-decoration: none;
+}
+.blue {
+    font-style: italic;
+    color:#66D9CE;
+}
+.purple {
+    color: #AE81FF;
+}
+.green {
+    color: #A6E22E;
+}
+.orange {
+    color: #FD9725;
+}
+.dot {
+	opacity: 0.3;
+}
+#typewriter{
+	font-size: 1.3em;
+	&:after{
+		content: "|";
+		animation: blink 500ms linear infinite alternate;
+	}
+	@include media-max(320px) {
+		font-size: 1.1em;
+	}
+}
+
+@-webkit-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}

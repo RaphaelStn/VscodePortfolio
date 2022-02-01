@@ -1,0 +1,30 @@
+.sidebar {
+    background-color: $main-bg;
+    border-right: solid 1px $border-color;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @include media-max(400px){
+        display: none;
+    }
+}
+.sidebar-selected {
+    color: white !important;
+    border-left: 2px solid $main-color;
+}
+.sidebar-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        padding : 10px;
+        text-decoration: none;
+        color: #586069;
+        &:hover {
+            cursor: pointer;
+            background-color: #586069;
+            color: white;
+        }
+    }
+}

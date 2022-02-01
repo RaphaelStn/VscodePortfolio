@@ -1,0 +1,73 @@
+// Variables
+$border-color : #191D20;
+$main-bg: #24292E;
+$second-bg: #1F2428;
+$main-color : #b83b3b;
+//mixins
+
+@mixin padding($value){
+    padding-left: $value;
+    padding-right: $value;
+}
+@mixin posterWidth($number, $img-width) {
+    width : calc(#{$number} *(#{$img-width} + 5px));
+}
+@mixin flexAlignCenter($direction) { // flex without justify for posters
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+}
+@mixin flexCenter($direction) {
+    @include flexAlignCenter($direction);
+    justify-content: center;
+}
+
+@mixin media-max($min-width) {
+    @media screen and (max-width : $min-width) {
+        &{@content}
+    }
+};
+//import
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import './topbar';
+@import './sidebar';
+@import './footer';
+@import './explorer';
+@import './menu';
+@import './home';
+@import './typewriter';
+@import './poster';
+
+//General rules
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    background-color: $main-bg;
+    color:white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+section {
+    overflow-x: hidden;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: row;
+}
+h1 {
+    margin: 0;
+}
+.main {
+    width: 100%;
+}
+.content {
+    margin: 15px;
+}

@@ -1,0 +1,82 @@
+
+.home-title {
+    text-align: center;
+    .wave {
+        font-size: 2em;
+        font-weight: 700
+    }
+    h1 {
+        font-size: 1.7em;
+        .name {
+            color : $main-color;
+        }
+    }
+}
+.cv, .love {
+    margin-top: 25px;
+    font-size: 1.2em;
+    .cv-title {
+        margin-top: 0px;
+        border-bottom: solid 5px lightgray;
+        width: fit-content;
+    }
+    .cv-items {
+        margin-top: 5px;
+        display: flex;
+        align-items: flex-start;
+        p {
+            margin: 0;
+        }
+        .date {
+            margin-right: 20px;
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+    }
+}
+.love {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    p {
+        margin: 0;
+    }
+
+}
+
+.home-bg {
+    img {
+        pointer-events: none;
+        position: absolute;
+        z-index: 0;
+        opacity: 0.1;
+    }
+    .bg1 {
+        top: 50px;
+        right: 20px;
+        @include media-max(550px) {
+            width: 250px;
+            height: 250px;
+        }
+    }
+    .bg2 {
+        bottom: 100px;
+        @include media-max(550px) {
+            width: 125px;
+            height: 125px;
+        }
+    }
+}
+.emoji {
+    font-weight: 300;
+}
+.raphael {
+    margin: 20px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}

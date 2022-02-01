@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+{% block contactmenu %} class="menu-selected" {% endblock %}
+{% block contactsidebar %} class="sidebar-selected" {% endblock %}
+
+{% block title %} Contact {% endblock %}
+
+{% block content %} 
+<pre id="typewriter">
+1  <span class="blue">let</span> contact_info <span class="red">=</span> {
+2 <span class="dot">|....</span><span class="yellow">'raphaelstacino@gmail.com'</span>,
+3 <span class="dot">|....</span><a target="_blank" href="https://github.com/RaphaelStn" class="yellow">'github.com/RaphaelStn'</a>,
+4 <span class="dot">|....</span><a target="_blank" href="https://github.com/RaphaelStn" class="yellow">'github.com/RaphaelStn'</a>,
+5 <span class="dot">|....</span><a target="_blank" href="https://github.com/RaphaelStn" class="yellow">'06.64.40.40.58'</a>,
+6 <span class="dot">|....</span>];
+7 };
+</pre>
+<form method="post">
+     <textarea name="message" cols="30" rows="10"></textarea>
+     <input type="submit" name="submit">
+</form>
+{% endblock %}

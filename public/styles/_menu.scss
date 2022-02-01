@@ -1,0 +1,29 @@
+.menu {
+    background-color: $second-bg;
+    max-width: 100%;
+    border-top: 2px solid $second-bg;
+}
+.menu-selected {
+    background-color: $main-bg;
+    border-top: 2px solid $main-color !important;
+}
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    a {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        @include media-max(350px) {
+            padding: 5px;
+        }
+        img {
+            width: 30px;
+            @include media-max(768px) {
+                width: 20px;
+            }
+        }
+    }
+}
