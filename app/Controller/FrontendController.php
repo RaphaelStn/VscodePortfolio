@@ -18,14 +18,24 @@ Class FrontendController extends Controller {
     }
     public function contact() {
         $twig = $this->loadTwig();
-        if(isset($_POST["submit"])) {
-            $mail = "fake@gmail.com";
-            $headers = 'From: '.$mail;
-            $message = $_POST['message'];
-            mail("raphaelstacino@gmail.com", "New message from Website", $message, $headers, "-f ".$mail);
-            header('Location: index.php?p=contact');
+        $confirms = [];
+        if(isset($_GET['sent'])) {
+            if($_GET['sent'] == 'true') {
+                array_push($confirms, 'Votre message est envoyé');
+            }
         }
-        echo $twig -> render('contact.twig');
+        if(isset($_POST['submit'])) {
+            if(!empty($_POST['message']) && !empty($_POST['email']) && !empty($_POST['name'])) {
+                $mail = "yougotamessage@gmail.com";
+                $headers = 'From: '.$mail;
+                $message = $_POST['name'] . "</br>" . $_POST['email'] . "</br>" . $_POST['message'];
+                mail("raphaelstacino@gmail.com", "New message from Website", $message, $headers, "-f ".$mail);
+                header("Location:index.php?p=contact&sent=true");
+            } else {
+                array_push($confirms, 'Merci de renseigner tout les champs');
+            }
+        }
+        echo $twig -> render('contact.twig', ['confirms' => $confirms]);
     }
 
 }

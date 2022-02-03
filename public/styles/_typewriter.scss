@@ -1,29 +1,29 @@
 .red {
-    color: #F92672;
+	color: #f92672;
 }
 .yellow {
-    color:#E6DB66;
+	color: #e6db66;
 	text-decoration: none;
 }
 .blue {
-    font-style: italic;
-    color:#66D9CE;
+	font-style: italic;
+	color: #66d9ce;
 }
 .purple {
-    color: #AE81FF;
+	color: #ae81ff;
 }
 .green {
-    color: #A6E22E;
+	color: #a6e22e;
 }
 .orange {
-    color: #FD9725;
+	color: #fd9725;
 }
 .dot {
 	opacity: 0.3;
 }
-#typewriter{
+#typewriter {
 	font-size: 1.3em;
-	&:after{
+	&:after {
 		content: "|";
 		animation: blink 500ms linear infinite alternate;
 	}
@@ -32,17 +32,29 @@
 	}
 }
 
-@-webkit-keyframes blink{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
+@-webkit-keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
-@-moz-keyframes blink{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
+@-moz-keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
-@keyframes blink{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

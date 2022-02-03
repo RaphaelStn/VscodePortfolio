@@ -5,17 +5,31 @@
 {% block title %} Contact {% endblock %}
 
 {% block content %} 
-<pre id="typewriter">
-1  <span class="blue">let</span> contact_info <span class="red">=</span> {
-2 <span class="dot">|....</span><span class="yellow">'raphaelstacino@gmail.com'</span>,
-3 <span class="dot">|....</span><a target="_blank" href="https://github.com/RaphaelStn" class="yellow">'github.com/RaphaelStn'</a>,
-4 <span class="dot">|....</span><a target="_blank" href="https://github.com/RaphaelStn" class="yellow">'github.com/RaphaelStn'</a>,
-5 <span class="dot">|....</span><a target="_blank" href="https://github.com/RaphaelStn" class="yellow">'06.64.40.40.58'</a>,
-6 <span class="dot">|....</span>];
-7 };
-</pre>
-<form method="post">
-     <textarea name="message" cols="30" rows="10"></textarea>
-     <input type="submit" name="submit">
-</form>
+<div class="contact">
+    <h3 class="contact-title">Contacts</h3>
+    <a href="mailto: raphaelstacino@gmail.com" class="link"><i class="fas fa-envelope"></i> raphaelstacino@gmail.com</a>
+    <a href="https://github.com/RaphaelStn" target="_blank"class="link"> <i class="fas fa-external-link-alt"></i> Github/RaphaelStn</a>
+</div>
+<p>Vous pouvez également me contacter via ce formulaire :</p>
+<form method="post" class="form" autocomplete="off">
+     <div class="input-container ic1">
+          <input id="name" class="input" type="text" name="name" placeholder=" " required="required"/>
+          <div class="cut"></div>
+          <label for="name" class="placeholder">Votre nom</label>
+     </div>
+     <div class="input-container ic2">
+          <input id="email" class="input" type="email" name="email" placeholder=" " required="required"/>
+          <div class="cut"></div>
+          <label for="email" class="placeholder">Votre Email</label>
+     </div>
+     <div class="input-container ic2 ic3">
+          <textarea id="message" class="input" type="text" name="message" placeholder=" " rows="10" required="required"></textarea>
+          <div class="cut cut-long"></div>
+          <label for="message" class="placeholder">Votre message</label>
+     </div>
+     <button type="text" name="submit" class="submit">Envoyer</button>
+     {% for confirm in confirms %}
+     <p>{{confirm}}</p>
+     {% endfor %}
+</div>
 {% endblock %}

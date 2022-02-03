@@ -18,7 +18,7 @@ three.appendChild(renderer.domElement);
 let scene = new THREE.Scene();
 
 let camera = new THREE.PerspectiveCamera(45, 1, 50,100);
-camera.position.set(75,20,0);
+camera.position.set(80,50,0);
 
 let light = new THREE.DirectionalLight(0xFFFFFF, 1.0);
 light.position.set(20, 100, 10);
@@ -44,13 +44,13 @@ scene.background = new THREE.Color(0x24292E);
 
 const controls = new OrbitControls(
     camera, renderer.domElement);
-  controls.target.set(0, 20, 0);
-  controls.update();
+    controls.target.set(0, 20, 0);
+    controls.update();
 
 let loader = new GLTFLoader();
-loader.load('./img/cyberpunk_desk/scene.gltf', (gltf) => {
-    obj = gltf.scene;
-    obj.scale.setScalar(5);
+loader.load('./img/untitled.glb', (glb) => {
+    obj = glb.scene;
+    obj.scale.setScalar(15);
     obj.position.x = 0;
     obj.position.y = 10;
     obj.receiveShadow = true;
