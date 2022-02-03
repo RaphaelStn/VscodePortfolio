@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta charset="UTF-8">
     <title> Raphaël Stacino | {% block title %}{% endblock %}</title>
-    <meta name="decription" content="#">
+    <meta name="decription" content="Raphaël Stacino, un site par Raphael Stacino inspiré de Visual Studio Code">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://kit.fontawesome.com/db9607f191.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="img/vsicon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
 </head>
 
@@ -36,6 +36,7 @@
         <div class="sidebar">
             <div class="sidebar-items">
                 <a {% block homesidebar %}{% endblock %} href="index.php?p=home"><img src="img/document-outline.svg" width="20" width="20" alt="close"></a>
+                <a {% block aboutsidebar %}{% endblock %} href="index.php?p=about"><img src="img/search-outline.svg" width="20" width="20" alt="close"></a>
                 <a {% block projectsidebar %}{% endblock %} href="index.php?p=project"><img src="img/code-slash-outline.svg" width="20" width="20" alt="close"></a>
                 <a {% block contactsidebar %}{% endblock %} href="index.php?p=contact"><img src="img/mail-outline.svg" width="20" width="20" alt="close"></ion-icon></a>
             </div>
@@ -43,22 +44,22 @@
         <div class="explorer">
             <p class="explorer-title">EXPLORER</p>
             <div class="portfolio">
-                <p class="portfolioEl"><ion-icon class="portfolio-icon" name="chevron-down-outline"></ion-icon>Portfolio</p>
+                <p class="portfolioEl"><img class="portfolio-icon"src="img/chevron-down-outline.svg" width="20"height="20" alt="php icone"/></ion-icon>Portfolio</p>
                 <div class="portfolio-items">
-                    <a href="index.php?p=home"><img src="img/php.svg" width="30"height="30" alt="php icone"/>Accueil.php</a>
-                    <a href="index.php?p=project"><img src="img/html.svg" width="30" height="30"  alt="html icone"/>Projets.html</a>
-                    <a href="index.php?p=contact"><img src="img/javascript.svg" width="30" height="30" alt="js icone"/>Contact.js</a>
+                    <a href="index.php?p=home"><img src="img/php.png" width="18"height="18" alt="php icone"/>Home.php</a>
+                    <a href="index.php?p=about"><img src="img/css.png" width="18" height="18" alt="js icone"/>About.css</a>
+                    <a href="index.php?p=project"><img src="img/html.png" width="18" height="18"  alt="html icone"/>Project.html</a>
+                    <a href="index.php?p=contact"><img src="img/js.png" width="18" height="18" alt="js icone"/>Contact.js</a>
                 </div>
             </div>
         </div>
         <div class="main">
-            <div class="menu">
-                <nav class="menu-items">
-                    <a {% block homemenu %}{% endblock %} href="index.php?p=home"><img src="img/php.svg" alt="php icone"/>Accueil.php</a>
-                    <a {% block projectmenu %}{% endblock %} href="index.php?p=project"><img src="img/html.svg" alt="html icone"/>Projets.html</a>
-                    <a {% block contactmenu %}{% endblock %} href="index.php?p=contact"><img src="img/javascript.svg" alt="js icone"/>Contact.js</a>
-                </nav>
-            </div>
+            <nav class="menu">
+                <a {% block homemenu %}{% endblock %} href="index.php?p=home"><img src="img/php.png" width="18"height="18" alt="php icone"/>Home.php</a>
+                <a {% block aboutmenu %}{% endblock %} href="index.php?p=about"><img src="img/css.png" width="18"height="18" alt="css icone"/>About.css</a>
+                <a {% block projectmenu %}{% endblock %} href="index.php?p=project"><img src="img/html.png" width="18"height="18" alt="html icone"/>Project.html</a>
+                <a {% block contactmenu %}{% endblock %} href="index.php?p=contact"><img src="img/js.png" width="18"height="18" alt="js icone"/>Contact.js</a>
+            </nav>
             <div class="content">
                 {% block content%}{% endblock %}
             </div>
@@ -66,8 +67,6 @@
     </section>
     <footer>
     </footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="scripts/slider.js"></script>
     <script src="scripts/typewriter.js"></script>
     {% block scripts%} {% endblock %}

@@ -24,4 +24,8 @@ switch ($p) {
         $controller = new FrontendController();
         $controller->contact();
         break;
+    case 'about' : 
+        $controller = new FrontendController();
+        $controller->about();
+        break;
 }

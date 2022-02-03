@@ -1,13 +1,11 @@
 .sidebar {
 	background-color: $main-bg;
+	position: fixed;
 	border-right: solid 1px $border-color;
-	width: 50px;
+	width: 39px;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	@include media-max(720px) {
-		display: none;
-	}
 }
 .sidebar-selected {
 	color: white !important;

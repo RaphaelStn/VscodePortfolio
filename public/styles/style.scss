@@ -42,14 +42,20 @@ $main-color: #b83b3b;
 @import "./home";
 @import "./project";
 @import "./contact";
+@import "./about";
 @import "./typewriter";
 
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url(../fonts/JetBrainsMono-Thin.ttf);
+}
 //General rules
 html {
 	height: 100%;
 	width: 100%;
 }
 body {
+	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -59,7 +65,7 @@ body {
 	font-family: "Source Sans Pro", sans-serif;
 }
 section {
-	overflow-x: hidden;
+	margin-top: 30px;
 	flex-grow: 1;
 	flex-shrink: 0;
 	flex-basis: auto;
@@ -70,13 +76,42 @@ h1 {
 	margin: 0;
 }
 .main {
-	width: 100%;
+	margin-left: 240px;
+	width: calc(100vw - 50px);
+	@include media-max(820px) {
+		margin-left: 40px;
+	}
 }
 .content {
 	font-family: sans-serif;
 	margin: 15px;
+	margin-top: 55px;
+	font-family: "JetBrainsMono", sans-serif;
 }
 .link {
 	text-decoration: none;
 	color: $main-color;
+}
+.bg {
+	img {
+		pointer-events: none;
+		position: absolute;
+		z-index: 0;
+		opacity: 0.1;
+	}
+	.bg1 {
+		top: 50px;
+		right: 20px;
+		@include media-max(550px) {
+			width: 250px;
+			height: 250px;
+		}
+	}
+	.bg2 {
+		bottom: 100px;
+		@include media-max(550px) {
+			width: 125px;
+			height: 125px;
+		}
+	}
 }

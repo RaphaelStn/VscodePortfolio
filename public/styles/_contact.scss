@@ -4,6 +4,9 @@
 	flex-direction: column;
 	margin-top: 25px;
 	font-size: 1.2em;
+	.link {
+		font-family: Arial, Helvetica, sans-serif;
+	}
 	.contact-title {
 		margin-top: 0px;
 		border-bottom: solid 5px lightgray;
@@ -12,10 +15,16 @@
 }
 
 .form {
+	font-family: Arial, Helvetica, sans-serif;
 	height: 500px;
 	width: 380px;
-	@include media-max(400px) {
+	@include media-max(440px) {
 		width: 290px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include media-max(320px) {
+		width: 250px;
 	}
 	.ic1 {
 		margin-top: 40px;

@@ -1,4 +1,10 @@
+.projet-title {
+	margin-top: 0px;
+	border-bottom: solid 5px lightgray;
+	width: fit-content;
+}
 .project-wrapper {
+	font-family: Arial, Helvetica, sans-serif;
 	user-select: none;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 530px);
@@ -6,6 +12,9 @@
 	justify-content: space-around;
 	@include media-max(640px) {
 		grid-template-columns: repeat(auto-fill, 325px);
+	}
+	@include media-max(380px) {
+		grid-template-columns: repeat(auto-fill, 255px);
 	}
 	.project-item {
 		position: relative;
@@ -18,6 +27,10 @@
 		@include media-max(640px) {
 			width: 300px;
 			height: 187.5px;
+		}
+		@include media-max(380px) {
+			width: 250px;
+			height: 156.25px;
 		}
 		&:hover {
 			&::before {
@@ -36,10 +49,10 @@
 			width: 100%;
 			height: 100%;
 			border-radius: 10px;
-			background: rgba(black, 0.8);
+			background: rgba(black, 0.9);
 			z-index: 2;
-			transition: 0.5s;
 			opacity: 0;
+			transition: 0.5s;
 		}
 		img {
 			width: 100%;
@@ -55,6 +68,7 @@
 			z-index: 3;
 			color: white;
 			opacity: 0;
+			transition: 0.5s;
 			form {
 				margin-left: auto;
 				input {

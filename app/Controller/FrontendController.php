@@ -16,6 +16,10 @@ Class FrontendController extends Controller {
         $twig = $this->loadTwig();
         echo $twig -> render('project.twig');
     }
+    public function About() {
+        $twig = $this->loadTwig();
+        echo $twig -> render('about.twig');
+    }
     public function contact() {
         $twig = $this->loadTwig();
         $confirms = [];
@@ -26,11 +30,15 @@ Class FrontendController extends Controller {
         }
         if(isset($_POST['submit'])) {
             if(!empty($_POST['message']) && !empty($_POST['email']) && !empty($_POST['name'])) {
-                $mail = "yougotamessage@gmail.com";
-                $headers = 'From: '.$mail;
-                $message = $_POST['name'] . "</br>" . $_POST['email'] . "</br>" . $_POST['message'];
-                mail("raphaelstacino@gmail.com", "New message from Website", $message, $headers, "-f ".$mail);
-                header("Location:index.php?p=contact&sent=true");
+                $mail = "MyWebsite@gmail.com";
+                $headers = 'Content-Type: text/html; charset=UTF-8';
+                $message = 'Nom: ' . $_POST['name'] . '<br/>Mail: ' . $_POST['email'] . '<br/>Message: ' . $_POST['message'];
+                $sendMail = mail('raphaelstacino@gmail.com', 'New message from Website', $message, $headers, '-f '.$mail);
+                if($sendMail) {
+                    header('Location:index.php?p=contact&sent=true');
+                } else {
+                    array_push($confirms, 'Une erreur est survenue, merci de réessayer plus tard');
+                }
             } else {
                 array_push($confirms, 'Merci de renseigner tout les champs');
             }

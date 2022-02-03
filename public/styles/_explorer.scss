@@ -1,27 +1,32 @@
 .explorer {
 	background-color: $second-bg;
-	border-left: $border-color;
+	border-right: 1px solid $border-color;
+	position: fixed;
+	margin-left: 40px;
 	display: flex;
 	flex-direction: column;
-	width: 200px;
+	width: 184px;
+	height: 100%;
 	padding-left: 15px;
-	@include media-max(768px) {
+	@include media-max(820px) {
 		display: none;
 	}
 }
 .portfolioEl {
+	display: flex;
 	cursor: pointer;
 }
 .portfolio-items {
 	display: flex;
 	flex-direction: column;
 	a {
+		padding-bottom: 2px;
 		display: flex;
 		align-items: center;
 		text-decoration: none;
 		color: white;
 		&:hover {
-			background-color: #6a737d;
+			background-color: #494e535d;
 		}
 	}
 }
