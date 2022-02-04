@@ -1,0 +1,47 @@
+{% extends "layout.twig" %}
+{% block aboutmenu %} class="menu-selected" {% endblock %}
+{% block aboutsidebar %} class="sidebar-selected" {% endblock %}
+
+{% block title %} About Me {% endblock %}
+
+{% block content %} 
+    <div class="bg">
+        <img class ="bg1" src="img/bg/bg1.png" alt="plants background" height="500" width="500">
+        <img class ="bg2" src="img/bg/bg2.png" alt="plants background" height="250" width="250">
+    </div>
+    <pre id="typewriter">
+1  $user<span class="red"> =</span> <span class="blue">array</span>(
+2  <span class="dot">|....</span><span class="yellow">'name'</span><span class="red"> =&#8250;</span><span class="yellow"> 'Raphaël Stacino'</span>,
+3  <span class="dot">|....</span><span class="yellow">'type'</span><span class="red"> =&#8250;</span><span class="yellow"> 'Dev Web'</span>,
+4  <span class="dot">|....</span><span class="yellow">'properties'</span><span class="red"> =&#8250;</span> [ 
+5  <span class="dot">|....|....</span><span class="yellow">'Php/SQL'</span>,
+6  <span class="dot">|....|....</span><span class="yellow">'Javascript'</span>,
+7  <span class="dot">|....|....</span><span class="yellow">'Html/Twig'</span>,
+8  <span class="dot">|....|....</span><span class="yellow">'Css/Sass'</span>],
+9  <span class="dot">|....</span><span class="yellow">'learning'</span><span class="red"> =&#8250;</span> [
+10 <span class="dot">|....|....</span><span class="yellow">'NodeJs'</span>,
+11 <span class="dot">|....|....</span><span class="yellow">'ReactJs'</span>,
+12 <span class="dot">|....|....</span><span class="yellow">'MongoDB'</span>],
+13 <span class="dot">|....</span><span class="yellow">'location'</span><span class="red"> =&#8250;</span><span class="yellow"> 'Paris'</span>,
+14 );
+</pre>
+    <div class="cv">
+        <h3 class="cv-title">Bio</h3>
+        <div class="cv-items"><span class="date">1994</span><p>Né à Enghien-les-bains.</p></div>
+        <div class="cv-items"><span class="date">2013</span><p>Obtention du Baccalauréat Scientifique.</p></div>
+        <div class="cv-items"><span class="date">2015</span><p>CAP Boucherie 🥩 puis boucher dans diverses boutiques au Havre et en région parisienne.</p></div>
+        <div class="cv-items"><span class="date">2022</span><p>Diplôme Developpeur Web obtenu grâce à <a href="https://openclassrooms.com/fr/" target="_blank" class="link">OpenClassroom.</a></p></div>
+    </div>
+    <div class="love">
+        <img class="raphael" src="img/raphael.jpg" alt="Raphael Stacino" >
+        <div>
+            <h3 class="cv-title">I<span class="emoji">❤️</span></h3>
+            <p>Aquariophile, addict aux plantes, art & musique.</p>
+        </div>
+    </div>
+ {% endblock %}
+
+{% block scripts%}
+    <script src="scripts/typewriter.js"></script>
+    <script src="scripts/about.js" type="module"></script> 
+{% endblock %}

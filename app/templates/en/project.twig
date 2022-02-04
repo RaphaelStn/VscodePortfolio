@@ -1,0 +1,90 @@
+{% extends "layout.twig" %}
+{% block projectmenu %} class="menu-selected" {% endblock %}
+{% block projectsidebar %}class="sidebar-selected" {% endblock %}
+
+{% block title %} My Projects {% endblock %}
+
+{% block content %} 
+
+<div class="project">
+    <h1 class="projet-title"> My projects</h1>
+    <p>Source code is available for most of my projects <a class="link" target="_blank" href="https://github.com/RaphaelStn">on my GitHub</a></p>
+    <div class="project-wrapper">
+        <div class="project-item">
+            <img src="img/siteshot/whattodo.jpeg" width="500" alt="What to do synthèse">
+            <div class="project-item-info">
+                <h2>WhatToDo</h2>
+                <p>Final exercice of my course. <br/> Usage of Twig, Sass, and others learnt from previous projects (API, slider JS, MySql). Written in OOP, et MVC.</p>
+                <form action="https://whattodo.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Link to the website">
+                </form>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="img/siteshot/spawnloop.jpeg" width="500" alt="spawnloop">
+            <div class="project-item-info">
+                <h2>SpawnLoop</h2>
+                <p>Personal project.<br/> Little game written in JavaScript. Score handling, intervals etc</p>
+                <form action="https://spawnloop.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Link to the website"> 
+                </form>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="img/siteshot/heroesloop.jpg" width="500"  alt="heroesloop">
+            <div class="project-item-info">
+                <h2>HeroesLoop</h2>
+                <p>Personal project.<br/> 2D game written in JavaScript, with gravity, collisions and movements.</p>
+                <form action="https://heroesloop.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Link to the website"> 
+                </form>
+            </div>
+        </div>
+         <div class="project-item">
+            <img src="img/siteshot/webagency.jpeg" width="500" alt="html css logo title">
+            <div class="project-item-info">
+                <h2>WebAgency</h2>
+                <p>First project of the course.<br/> Learning basics of Frontend development.</p>
+                <form action="https://webagency.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Link to the website"> 
+                </form>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="img/siteshot/wordpress.jpeg" width="500" alt="ireki wordpress">
+            <div class="project-item-info">
+                <h2>Ireki</h2>
+                <p>Second project of the course.<br/> Building a WordPress website, custom theme, introduction to SEO.</p>
+                <form action="https://ireki.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Link to the website"> 
+                </form>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="img/siteshot/javascript.jpeg" width="500" alt="javasript exercice">
+            <div class="project-item-info">
+                <h2>Velib'</h2>
+                <p>Thrid project of the course.<br/> Learning basics of Javascript, OOP, sliders, API Rest</p>
+                <form action="https://velib.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Link to the website"> 
+                </form>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="img/siteshot/blog.jpeg" width="500" alt="php exercice">
+            <div class="project-item-info">
+                <h2>Blog</h2>
+                <p>Fourth project of the course.<br/> Learning basics of Backend development, PHP and MySql, written in OOP and MVC</p>
+                <form action="https://blog.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Link to the website"> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts%} 
+<script src="scripts/project.js"></script> 
+{% endblock %}
+       

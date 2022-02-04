@@ -1,8 +1,8 @@
 // Variables
 
 $border-color: #191d20;
-$main-bg: #24292e;
-$second-bg: #1f2428;
+$main-bg: #282c35;
+$second-bg: #21242b;
 $main-color: #b83b3b;
 
 //mixins
@@ -44,11 +44,9 @@ $main-color: #b83b3b;
 @import "./contact";
 @import "./about";
 @import "./typewriter";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 
-@font-face {
-	font-family: "JetBrainsMono";
-	src: url(../fonts/JetBrainsMono-Thin.ttf);
-}
 //General rules
 html {
 	height: 100%;
@@ -61,7 +59,7 @@ body {
 	height: 100%;
 	margin: 0;
 	background-color: $main-bg;
-	color: white;
+	color: #8fa1ab;
 	font-family: "Source Sans Pro", sans-serif;
 }
 section {
@@ -83,10 +81,10 @@ h1 {
 	}
 }
 .content {
-	font-family: sans-serif;
+	font-family: "Lato", sans-serif;
+	color: white;
 	margin: 15px;
 	margin-top: 55px;
-	font-family: "JetBrainsMono", sans-serif;
 }
 .link {
 	text-decoration: none;

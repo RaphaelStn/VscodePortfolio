@@ -43,6 +43,11 @@ header {
 	@include media-max(780px) {
 		width: 100%;
 	}
+	.topbar-name {
+		@include media-max(780px) {
+			display: none;
+		}
+	}
 }
 .topbar-side-btn {
 	display: flex;

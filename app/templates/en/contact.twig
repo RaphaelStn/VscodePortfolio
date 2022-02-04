@@ -1,0 +1,44 @@
+{% extends "layout.twig" %}
+{% block contactmenu %} class="menu-selected" {% endblock %}
+{% block contactsidebar %} class="sidebar-selected" {% endblock %}
+
+{% block title %} Contact {% endblock %}
+
+{% block content %} 
+    <div class="bg">
+        <img class ="bg1" src="img/bg/bg1.png" alt="plants background" height="500" width="500">
+        <img class ="bg2" src="img/bg/bg2.png" alt="plants background" height="250" width="250">
+    </div>
+     <div class="contact">
+          <h3 class="contact-title">Contacts</h3>
+          <a href="mailto:raphaelstacino@gmail.com" class="link"><i class="fas fa-envelope"></i> raphaelstacino@gmail.com</a>
+          <a href="https://github.com/RaphaelStn" target="_blank" class="link"><i class="fas fa-external-link-alt"></i> Github/RaphaelStn</a>
+          <a href="https://www.linkedin.com/in/raphaël-stacino-b0b814194/" target="_blank" class="link"><i class="fas fa-external-link-alt"></i> LinkedIn</a>
+     </div>
+     <p>You can also contact me through this form: </p>
+     <form method="post" class="form" autocomplete="off">
+          <div class="input-container ic1">
+               <input id="name" class="input" type="text" name="name" placeholder=" " required="required"/>
+               <div class="cut"></div>
+               <label for="name" class="placeholder">Your Name</label>
+          </div>
+          <div class="input-container ic2">
+               <input id="email" class="input" type="email" name="email" placeholder=" " required="required"/>
+               <div class="cut"></div>
+               <label for="email" class="placeholder">Your mail</label>
+          </div>
+          <div class="input-container ic2 ic3">
+               <textarea id="message" class="input" name="message" placeholder=" " rows="10" required="required"></textarea>
+               <div class="cut cut-long"></div>
+               <label for="message" class="placeholder">Your message</label>
+          </div>
+          <button type="submit" name="submit" class="submit">Submit</button>
+     </form>
+     {% for confirm in confirms %}
+          <p>{{confirm}}</p>
+     {% endfor %}
+{% endblock %}
+
+{% block scripts%}
+<script src="scripts/contact.js"></script> 
+{% endblock %}

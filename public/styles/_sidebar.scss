@@ -10,8 +10,10 @@
 .sidebar-selected {
 	color: white !important;
 	border-left: 2px solid $main-color;
+	background-color: $second-bg;
 }
 .sidebar-items {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -24,5 +26,18 @@
 			background-color: #586069;
 			color: white;
 		}
+	}
+}
+.switch {
+	margin-top: auto;
+	margin-bottom: 55px;
+	input[type="checkbox"] {
+		width: 0;
+		height: 0;
+		visibility: hidden;
+		position: absolute;
+	}
+	label {
+		cursor: pointer;
 	}
 }

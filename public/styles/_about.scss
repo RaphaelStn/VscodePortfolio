@@ -1,25 +1,21 @@
 .cv,
 .love {
 	margin-top: 25px;
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.2em;
 	.cv-title {
 		margin-top: 0px;
 		border-bottom: solid 5px lightgray;
 		width: fit-content;
-		font-family: "JetBrainsMono", sans-serif;
 	}
 	.cv-items {
-		margin-top: 5px;
+		margin-top: 15px;
 		display: flex;
 		align-items: flex-start;
 		p {
 			margin: 0;
 		}
 		.date {
-			font-family: "JetBrainsMono", sans-serif;
 			margin-right: 20px;
-			font-weight: 700;
 		}
 	}
 }
@@ -41,9 +37,9 @@
 	border-width: 2px;
 	border-style: solid;
 	border-radius: 50%;
-	width: 150px;
-	height: 150px;
+	width: 110px;
+	height: 110px;
 }
 .cv {
-	margin-top: 350px;
+	margin-top: 410px;
 }

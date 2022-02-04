@@ -1,0 +1,90 @@
+{% extends "layout.twig" %}
+{% block projectmenu %} class="menu-selected" {% endblock %}
+{% block projectsidebar %}class="sidebar-selected" {% endblock %}
+
+{% block title %} Mes Projets {% endblock %}
+
+{% block content %} 
+
+<div class="project">
+    <h1 class="projet-title"> Mes projets</h1>
+    <p>Le code source de la plupart des projets est disponible sur <a class="link" target="_blank" href="https://github.com/RaphaelStn">ma page GitHub</a></p>
+    <div class="project-wrapper">
+        <div class="project-item">
+            <img src="img/siteshot/whattodo.jpeg" width="500" alt="What to do synthèse">
+            <div class="project-item-info">
+                <h2>WhatToDo</h2>
+                <p>Excercice synthèse de la formation. <br/> Utilisation de Twig, Sass, ainsi que de toute les techniques apprises (API, création d'un slider JS, récupération donnée MySql). Le tout en OOP, et MVC.</p>
+                <form action="https://whattodo.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Voir le site">
+                </form>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="img/siteshot/spawnloop.jpeg" width="500" alt="spawnloop">
+            <div class="project-item-info">
+                <h2>SpawnLoop</h2>
+                <p>Projet personnel.<br/> Mise en place d'un simple jeu écrit en Javascript. Gestion du score, intervals etc</p>
+                <form action="https://spawnloop.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Voir le site"> 
+                </form>
+            </div>
+        </div>
+        <div class="project-item">      
+            <img src="img/siteshot/heroesloop.jpg" width="500"  alt="heroesloop">
+            <div class="project-item-info">
+                <h2>HeroesLoop</h2>
+                <p>Projet personnel. <br/>Création d'un jeu 2D avec gravité, déplacement, collisions via JavaScript.</p>
+                <form action="https://heroesloop.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Voir le site"> 
+                </form>
+            </div>
+        </div>
+         <div class="project-item">
+            <img src="img/siteshot/webagency.jpeg" width="500" alt="html css logo title">
+            <div class="project-item-info">
+                <h2>WebAgency</h2>
+                <p>Premier projet de la formation. <br/>Apprentissage des bases du Frontend, HTML et CSS. Intégration d'une maquette.</p>
+                <form action="https://webagency.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Voir le site"> 
+                </form>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="img/siteshot/wordpress.jpeg" width="500" alt="ireki wordpress">
+            <div class="project-item-info">
+                <h2>Ireki</h2>
+                <p>Second projet de la formation.<br/> Création d'un site WordPress, mise en place d'extensions et d'un thème personnalisé. Initiation au SEO</p>
+                <form action="https://ireki.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Voir le site"> 
+                </form>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="img/siteshot/javascript.jpeg" width="500" alt="javasript exercice">
+            <div class="project-item-info">
+                <h2>Velib'</h2>
+                <p>Troisième projet de la formation.<br/> Initiation à JavaScript, aux appels API, gestion d'un canvas et sliders.</p>
+                <form action="https://velib.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Voir le site"> 
+                </form>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="img/siteshot/blog.jpeg" width="500" alt="php exercice">
+            <div class="project-item-info">
+                <h2>Blog</h2>
+                <p>Quatrième projet de la formation.<br/> Initiation au Backend, création d'un blog avec élément d'un CRUD (Create Read Update Delete) en PHP et MySQL, en MVC.</p>
+                <form action="https://blog.raphael-stacino.fr" target="_blank">
+                    <input type="submit" value="Voir le site"> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts%} 
+<script src="scripts/project.js"></script> 
+{% endblock %}
+       

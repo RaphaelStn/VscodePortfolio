@@ -12,7 +12,8 @@ class Typewriter {
         writingTag = false,
         tagOpen = false,
         typeSpeed = this.speed,
-    tempTypeSpeed = 0;
+        tempTypeSpeed = 0;
+
     let type = function() {
     
         if (writingTag === true) {
@@ -44,7 +45,7 @@ class Typewriter {
             t.innerHTML += HTML[cursorPosition];
         }
         if (writingTag === true && HTML[cursorPosition] === ">") {
-            tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+            tempTypeSpeed = (Math.random() * typeSpeed) + 40;
             writingTag = false;
             if (tagOpen) {
                 var newSpan = document.createElement("span");

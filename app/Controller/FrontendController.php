@@ -6,26 +6,27 @@ Class FrontendController extends Controller {
 
     public function __construct(){
         parent::__construct();
+        $this->twig = $this->loadTwig();
     }
     
     public function home() {
-        $twig = $this->loadTwig();
-        echo $twig -> render('home.twig');
+        echo $this->twig -> render('home.twig');
     }
     public function project() {
-        $twig = $this->loadTwig();
-        echo $twig -> render('project.twig');
+        echo $this->twig -> render('project.twig');
     }
     public function About() {
-        $twig = $this->loadTwig();
-        echo $twig -> render('about.twig');
+        echo $this->twig -> render('about.twig');
     }
     public function contact() {
-        $twig = $this->loadTwig();
         $confirms = [];
         if(isset($_GET['sent'])) {
             if($_GET['sent'] == 'true') {
-                array_push($confirms, 'Votre message est envoyé');
+                if($_SESSION['lang'] == 'fr') {
+                    array_push($confirms, 'Votre message à été envoyé.');
+                } else {
+                    array_push($confirms, 'Your message has been sent.');
+                }
             }
         }
         if(isset($_POST['submit'])) {
@@ -37,13 +38,21 @@ Class FrontendController extends Controller {
                 if($sendMail) {
                     header('Location:index.php?p=contact&sent=true');
                 } else {
-                    array_push($confirms, 'Une erreur est survenue, merci de réessayer plus tard');
+                    if($_SESSION['lang'] == 'fr') {
+                        array_push($confirms, 'Une erreur est survenue, merci de réessayer plus tard');
+                    } else {
+                        array_push($confirms, 'Please try again');
+                    }
                 }
             } else {
-                array_push($confirms, 'Merci de renseigner tout les champs');
+                if($_SESSION['lang'] == 'fr') {
+                    array_push($confirms, 'Merci de renseigner tout les champs');
+                } else {
+                    array_push($confirms, 'Please fill empty inputs');
+                }
             }
         }
-        echo $twig -> render('contact.twig', ['confirms' => $confirms]);
+        echo $this->twig -> render('contact.twig', ['confirms' => $confirms]);
     }
 
 }
