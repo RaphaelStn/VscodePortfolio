@@ -28,4 +28,8 @@ switch ($p) {
         $controller = new FrontendController();
         $controller->about();
         break;
+    default : 
+        $controller = new FrontendController();
+        $controller->http404();
+        break;
 }

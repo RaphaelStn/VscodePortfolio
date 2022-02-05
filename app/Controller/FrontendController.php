@@ -54,5 +54,9 @@ Class FrontendController extends Controller {
         }
         echo $this->twig -> render('contact.twig', ['confirms' => $confirms]);
     }
+    public function http404() {
+        header('HTTP/1.0 404 Not Found');
+        header('Location: index.php?=home');
+    }
 
 }
