@@ -676,13 +676,15 @@ footer p {
 }
 
 .cv,
-.love {
+.love,
+.skills {
   margin-top: 25px;
   font-size: 1.2em;
 }
 
 .cv .cv-title,
-.love .cv-title {
+.love .cv-title,
+.skills .cv-title {
   margin-top: 0px;
   border-bottom: solid 5px lightgray;
   width: -webkit-fit-content;
@@ -691,7 +693,8 @@ footer p {
 }
 
 .cv .cv-items,
-.love .cv-items {
+.love .cv-items,
+.skills .cv-items {
   margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -702,12 +705,14 @@ footer p {
 }
 
 .cv .cv-items p,
-.love .cv-items p {
+.love .cv-items p,
+.skills .cv-items p {
   margin: 0;
 }
 
 .cv .cv-items .date,
-.love .cv-items .date {
+.love .cv-items .date,
+.skills .cv-items .date {
   margin-right: 20px;
 }
 
@@ -746,7 +751,7 @@ footer p {
 }
 
 .cv {
-  margin-top: 410px;
+  margin-top: 350px;
 }
 
 .red {
