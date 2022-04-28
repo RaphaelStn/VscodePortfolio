@@ -22,11 +22,7 @@ Class FrontendController extends Controller {
         $confirms = [];
         if(isset($_GET['sent'])) {
             if($_GET['sent'] == 'true') {
-                if($_SESSION['lang'] == 'fr') {
-                    array_push($confirms, 'Votre message à été envoyé.');
-                } else {
-                    array_push($confirms, 'Your message has been sent.');
-                }
+                array_push($confirms, 'Your message has been sent.');
             }
         }
         if(isset($_POST['submit'])) {
@@ -38,18 +34,10 @@ Class FrontendController extends Controller {
                 if($sendMail) {
                     header('Location:index.php?p=contact&sent=true');
                 } else {
-                    if($_SESSION['lang'] == 'fr') {
-                        array_push($confirms, 'Une erreur est survenue, merci de réessayer plus tard');
-                    } else {
-                        array_push($confirms, 'Please try again');
-                    }
+                    array_push($confirms, 'Please try again');
                 }
             } else {
-                if($_SESSION['lang'] == 'fr') {
-                    array_push($confirms, 'Merci de renseigner tout les champs');
-                } else {
-                    array_push($confirms, 'Please fill empty inputs');
-                }
+                array_push($confirms, 'Please fill empty inputs');
             }
         }
         echo $this->twig -> render('contact.twig', ['confirms' => $confirms]);

@@ -1,35 +1,35 @@
 .explorer {
-	background-color: $second-bg;
-	border-right: 1px solid $border-color;
-	position: fixed;
-	margin-left: 40px;
-	display: flex;
-	flex-direction: column;
-	width: 184px;
-	height: 100%;
-	padding-left: 15px;
-	@include media-max(820px) {
-		display: none;
-	}
+    background-color: $second-bg;
+    border-right: 1px solid $border-color;
+    position: fixed;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 184px;
+    height: 100%;
+    padding-left: 15px;
+    @include media-max(820px) {
+        display: none;
+    }
 }
 .portfolioEl {
-	display: flex;
-	cursor: pointer;
+    display: flex;
+    cursor: pointer;
 }
 .portfolio-items {
-	display: flex;
-	flex-direction: column;
-	a {
-		padding-bottom: 5px;
-		display: flex;
-		align-items: center;
-		text-decoration: none;
-		color: white;
-		&:hover {
-			background-color: #494e535d;
-		}
-	}
+    display: flex;
+    flex-direction: column;
+    a {
+        padding-bottom: 6px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        &:hover {
+            background-color: #494e535d;
+        }
+    }
 }
 .portfolio-icon {
-	transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }

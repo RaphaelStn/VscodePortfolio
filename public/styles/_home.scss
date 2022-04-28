@@ -1,14 +1,14 @@
 .home-title {
-	text-align: center;
-	@include flexCenter(column);
-	.wave {
-		font-size: 2em;
-		font-weight: 700;
-	}
-	h1 {
-		font-size: 1.7em;
-		.name {
-			color: $main-color;
-		}
-	}
+    text-align: center;
+    @include flexCenter(column);
+    .wave {
+        font-size: 2em;
+        font-weight: 700;
+    }
+    h1 {
+        font-size: 1.7em;
+        .name {
+            color: $main-color;
+        }
+    }
 }

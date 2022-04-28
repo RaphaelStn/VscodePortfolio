@@ -167,7 +167,7 @@ header img:hover {
   margin-bottom: 55px;
 }
 
-.switch input[type="checkbox"] {
+.switch input[type='checkbox'] {
   width: 0;
   height: 0;
   visibility: hidden;
@@ -255,7 +255,7 @@ footer p {
 }
 
 .portfolio-items a {
-  padding-bottom: 5px;
+  padding-bottom: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,7 +427,7 @@ footer p {
 }
 
 .project-wrapper .project-item::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -791,7 +791,7 @@ footer p {
 }
 
 #typewriter:after {
-  content: "|";
+  content: '|';
   -webkit-animation: blink 500ms linear infinite alternate;
           animation: blink 500ms linear infinite alternate;
 }
@@ -885,6 +885,7 @@ h1 {
   color: white;
   margin: 15px;
   margin-top: 55px;
+  margin-bottom: 50px;
 }
 
 .link {

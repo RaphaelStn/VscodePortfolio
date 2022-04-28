@@ -1,22 +1,22 @@
 footer {
-	z-index: 10;
-	position: fixed;
-	bottom: 0;
-	margin: 0;
-	background-color: $second-bg;
-	width: 100%;
-	border-top: 1px solid $border-color;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	p {
-		font-size: 0.8rem;
-		margin: 0;
-	}
-	@include media-max(768px) {
-		justify-content: center;
-		img {
-			display: none;
-		}
-	}
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    background-color: $second-bg;
+    width: 100%;
+    border-top: 1px solid $border-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    p {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+    @include media-max(768px) {
+        justify-content: center;
+        img {
+            display: none;
+        }
+    }
 }

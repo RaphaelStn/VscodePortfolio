@@ -1,65 +1,65 @@
 .red {
-	color: #f92672;
+    color: #f92672;
 }
 .yellow {
-	color: #e6db66;
-	text-decoration: none;
+    color: #e6db66;
+    text-decoration: none;
 }
 .blue {
-	font-style: italic;
-	color: #66d9ce;
+    font-style: italic;
+    color: #66d9ce;
 }
 .purple {
-	color: #ae81ff;
+    color: #ae81ff;
 }
 .green {
-	color: #a6e22e;
+    color: #a6e22e;
 }
 .orange {
-	color: #fd9725;
+    color: #fd9725;
 }
 .dot {
-	opacity: 0.3;
+    opacity: 0.3;
 }
 #typewriter {
-	font-size: 1.2rem;
-	position: absolute;
-	top: 70px;
-	&:after {
-		content: "|";
-		animation: blink 500ms linear infinite alternate;
-	}
-	@include media-max(480px) {
-		font-size: 0.9rem;
-	}
-	@include media-max(290px) {
-		font-size: 0.8rem;
-	}
+    font-size: 1.2rem;
+    position: absolute;
+    top: 70px;
+    &:after {
+        content: '|';
+        animation: blink 500ms linear infinite alternate;
+    }
+    @include media-max(480px) {
+        font-size: 0.9rem;
+    }
+    @include media-max(290px) {
+        font-size: 0.8rem;
+    }
 }
 
 @-webkit-keyframes blink {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-moz-keyframes blink {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes blink {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

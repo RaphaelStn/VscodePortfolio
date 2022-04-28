@@ -1,43 +1,43 @@
 .sidebar {
-	background-color: $main-bg;
-	position: fixed;
-	border-right: solid 1px $border-color;
-	width: 39px;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+    background-color: $main-bg;
+    position: fixed;
+    border-right: solid 1px $border-color;
+    width: 39px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .sidebar-selected {
-	color: white !important;
-	border-left: 2px solid $main-color;
-	background-color: $second-bg;
+    color: white !important;
+    border-left: 2px solid $main-color;
+    background-color: $second-bg;
 }
 .sidebar-items {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	a {
-		padding: 10px;
-		text-decoration: none;
-		color: #586069;
-		&:hover {
-			cursor: pointer;
-			background-color: #586069;
-			color: white;
-		}
-	}
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        padding: 10px;
+        text-decoration: none;
+        color: #586069;
+        &:hover {
+            cursor: pointer;
+            background-color: #586069;
+            color: white;
+        }
+    }
 }
 .switch {
-	margin-top: auto;
-	margin-bottom: 55px;
-	input[type="checkbox"] {
-		width: 0;
-		height: 0;
-		visibility: hidden;
-		position: absolute;
-	}
-	label {
-		cursor: pointer;
-	}
+    margin-top: auto;
+    margin-bottom: 55px;
+    input[type='checkbox'] {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+    label {
+        cursor: pointer;
+    }
 }
