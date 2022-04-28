@@ -2,7 +2,7 @@
     background-color: $second-bg;
     border-right: 1px solid $border-color;
     position: fixed;
-    margin-left: 40px;
+    margin-left: 55px;
     display: flex;
     flex-direction: column;
     width: 184px;
@@ -25,6 +25,9 @@
         align-items: center;
         text-decoration: none;
         color: white;
+        img {
+            padding-right: 3px;
+        }
         &:hover {
             background-color: #494e535d;
         }

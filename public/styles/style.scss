@@ -74,10 +74,10 @@ h1 {
 	margin: 0;
 }
 .main {
-	margin-left: 240px;
+	margin-left: 255px;
 	width: calc(100vw - 50px);
 	@include media-max(820px) {
-		margin-left: 40px;
+		margin-left: 55px;
 	}
 }
 .content {
