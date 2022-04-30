@@ -20,10 +20,6 @@ switch ($p) {
         $controller = new FrontendController();
         $controller->project();
         break;
-    case 'contact' : 
-        $controller = new FrontendController();
-        $controller->contact();
-        break;
     case 'about' : 
         $controller = new FrontendController();
         $controller->about();
